@@ -228,12 +228,8 @@ function addRole() {
         const selectedDept = departmentSelect.find(element => element.name == answers.department)
         db.query(`INSERT INTO role (title, salary, department_id) VALUES 
          ('${answers.role}',${answers.salary},${selectedDept.id})`, function (err, results) {
-          console.log('\n');
         })
-
         vandelay();
       })
-
   });
-
 }
